@@ -7,6 +7,8 @@ connection = psycopg2.connect(database = "chinook")
 # build cursor object (sset/list)
 cursor = connection.cursor()
 
+# Query1 - Select all records from artist table
+cursor.execute('SELECT * FROM "Artist"')
 
 # fetch results (multiple)
 results = cursor.fetchall()
